@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/detail_artikel.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                         <a href="#" class="btn-home">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="btn-article">Artikel</a>
+                        <a href="artikel_page.html" class="btn-article">Artikel</a>
                     </li>
                     <li>
                         <a href="#" class="btn-donasi">Donasi</a>
@@ -34,11 +34,27 @@
         <ul class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li><a href="#">Semua Artikel</a></li>
-            <li>[Judul Artikel]</li>
+            <li>Detail Artikel</li>
         </ul>
-        <div class="hero">
-        </div>
-        </div>
+        <!-- <section class="hero">
+            <p>judul</p>
+        </section> -->
+        <section class="body_artikel">
+            <div class="hero">
+                <p id="judul">judul</p>
+            </div>
+            <div id="par_1">
+                <p id="par_1">paragraf 1</p>
+            </div>
+            <img id="img2" src="" />
+            <div class="par_2">
+                <p id="par_2">paragraf 2</p>
+            </div>
+            <div class="ket">
+                <p id="tanggal">tanggal</p>
+                <p id="sumber"> sumber</p>
+            </div>
+        </section>
         <section class="articles" style="margin-top:50px">
             <article>
                 <div class="article-wrapper">
@@ -50,54 +66,54 @@
                         <p>
                             Climate Central meluncurkan studi baru tentang dampak jangka panjang kenaikan ......
                         </p>
-                        <a href="#" class="read-more">Read more <span class="sr-only">about this is some title</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
+                        <a href="detail_artikel.html" onclick="getArticleDetails('1')" class=" read-more">Read more <span class="sr-only ">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg " class="icon " viewBox="0 0 20 20 "
+                                fill="currentColor ">
+                                <path fill-rule="evenodd "
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z "
+                                    clip-rule="evenodd " />
                             </svg>
                         </a>
                     </div>
                 </div>
             </article>
             <article>
-                <div class="article-wrapper">
+                <div class="article-wrapper ">
                     <figure>
-                        <img src="https://res.cloudinary.com/dbmiqiqf4/image/upload/v1682821490/samples/hijauin/markus-spiske-dYZumbs8f_E-unsplash_aguzjv.jpg" alt="" />
+                        <img src="https://res.cloudinary.com/dbmiqiqf4/image/upload/v1682821490/samples/hijauin/markus-spiske-dYZumbs8f_E-unsplash_aguzjv.jpg " alt=" " />
                     </figure>
-                    <div class="article-body">
+                    <div class="article-body ">
                         <h3>Siapa yang sebenarnya kita selamatkan?</h3>
                         <p>
                             Bumi atau manusia? Selama inii kita sering mendengar ucapan “Selamatkan bumi”......
                         </p>
-                        <a href="#" class="read-more">Read more <span class="sr-only"> about this is some title</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
+                        <a href="# " class="read-more ">Read more <span class="sr-only "> about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg " class="icon " viewBox="0 0 20 20 "
+                                fill="currentColor ">
+                                <path fill-rule="evenodd "
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z "
+                                    clip-rule="evenodd " />
                             </svg>
                         </a>
                     </div>
                 </div>
             </article>
             <article>
-                <div class="article-wrapper">
+                <div class="article-wrapper ">
                     <figure>
-                        <img src="https://res.cloudinary.com/dbmiqiqf4/image/upload/v1682821505/samples/hijauin/li-an-lim-ycW4YxhrWHM-unsplash_duoof4.jpg" alt="" />
+                        <img src="https://res.cloudinary.com/dbmiqiqf4/image/upload/v1682821505/samples/hijauin/li-an-lim-ycW4YxhrWHM-unsplash_duoof4.jpg " alt=" " />
                     </figure>
-                    <div class="article-body">
+                    <div class="article-body ">
                         <h3>Menyelamatkan bumi kita</h3>
                         <p>
                             Tidak seperti rencana yang dapat dicadangkan, mahluk hidup tidak punya planet bumi cadangan. Hanya ada satu........
                         </p>
-                        <a href="#" class="read-more">Read more <span class="sr-only">about this is some title</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
+                        <a href="# " class="read-more ">Read more <span class="sr-only ">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg " class="icon " viewBox="0 0 20 20 "
+                                fill="currentColor ">
+                                <path fill-rule="evenodd "
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z "
+                                    clip-rule="evenodd " />
                             </svg>
                         </a>
                     </div>
@@ -105,7 +121,7 @@
             </article>
         </section>
     </main>
-    <script src="/js/script.js "></script>
+    <script src="detail_artikel.js "></script>
 </body>
 <footer class="top-footer ">
     <div class="footer1 ">
