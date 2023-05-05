@@ -131,8 +131,18 @@ ul.breadcrumb li a:hover {
     align-items: center;
     color: #fff;
     font-size: 20px;
-    background-image: url('https://res.cloudinary.com/dbmiqiqf4/image/upload/v1682821483/samples/hijauin/hero_jkeu6u.png');
+    /* background-image: url('https://res.cloudinary.com/dbmiqiqf4/image/upload/v1682821483/samples/hijauin/hero_jkeu6u.png'); */
 }
+
+#judul {
+    font-size: 35px;
+}
+
+
+/* .hero #img {
+    width: 1098px;
+    height: 100%;
+} */
 
 
 /* ==================================== MAIN ====================================*/

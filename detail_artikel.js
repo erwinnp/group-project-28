@@ -2,6 +2,7 @@ fetch('https://645348fbc18adbbdfe9933f9.mockapi.io/detail')
     .then(response => response.json())
     .then(data => {
         // update HTML elements with the data
+        document.getElementById('img').src = data[0].img;
         document.getElementById('judul').innerHTML = data[0].judul;
         document.getElementById('par_1').innerHTML = data[0].par_1;
         document.getElementById('img2').src = data[0].img2;
