@@ -1,4 +1,4 @@
-const apiUrl = 'https://645348fbc18adbbdfe9933f9.mockapi.io/detail';
+const apiUrl = 'https://645348fbc18adbbdfe9933f9.mockapi.io/artikel';
 const params = new URLSearchParams(window.location.search);
 const idArtikel = params.get('id');
 
