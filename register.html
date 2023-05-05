@@ -19,18 +19,24 @@
             <h1 class="text-[#52C41A] text-2xl font-semibold">Hijauin.</h1>
             <p class="text-sm">Create New Account</p>
           </div>
-          <form class="flex flex-col w-full px-[20px] py-[16px] gap-4">
+          <form
+            id="form-register"
+            class="flex flex-col w-full px-[20px] py-[16px] gap-4"
+          >
             <input
+              id="fullname"
               class="border-b-2 py-2 px-3"
               type="text"
               placeholder="Full Name"
             />
             <input
+              id="email-register"
               class="border-b-2 focus:border-slate-400 py-2 px-3"
               type="email"
               placeholder="Email Address"
             />
             <input
+              id="password-register"
               class="border-b-2 py-2 px-3"
               type="password"
               placeholder="Password"
@@ -51,5 +57,7 @@
         </div>
       </div>
     </main>
+
+    <script src="register.js"></script>
   </body>
 </html>
