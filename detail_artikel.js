@@ -1,52 +1,34 @@
-fetch('https://645348fbc18adbbdfe9933f9.mockapi.io/detail')
-    .then(response => response.json())
-    .then(data => {
-        // update HTML elements with the data
-        document.getElementById('img').src = data[0].img;
-        document.getElementById('judul').innerHTML = data[0].judul;
-        document.getElementById('par_1').innerHTML = data[0].par_1;
-        document.getElementById('img2').src = data[0].img2;
-        document.getElementById('par_2').innerHTML = data[0].par_2;
-        document.getElementById('tanggal').innerHTML = data[0].tanggal;
-        document.getElementById('sumber').innerHTML = data[0].sumber;
-    })
+const apiUrl = 'https://645348fbc18adbbdfe9933f9.mockapi.io/detail';
+const params = new URLSearchParams(window.location.search);
+const idArtikel = params.get('id');
 
-// // Select all article links
-// const articleLinks = document.querySelectorAll('.article-link');
+console.log(idArtikel);
 
-// // Add click event listener to each link
-// articleLinks.forEach(link => {
-//     link.addEventListener('click', event => {
-//         event.preventDefault();
+const getDetail = async (id) => {
+  const res = await fetch(`${apiUrl}/${id}`);
 
-//         // Get article id from data-id attribute
-//         const articleId = link.dataset.id;
+  const data = await res.json();
+  console.log(data);
+  displayDetail(data);
+};
 
-//         // Send API request to get article data
-//         fetch(`https://645348fbc18adbbdfe9933f9.mockapi.io/detail/${id}`)
-//             .then(response => response.json())
-//             .then(data => {
-//                 // Use article data to populate detail view
-//                 // Get DOM elements for article data
-//                 const title = document.getElementById('judul');
-//                 const par1 = document.getElementById('par_1');
-//                 const par2 = document.getElementById('par_2');
-//                 const img = document.getElementById('img');
-//                 const img2 = document.getElementById('img2');
-//                 const tanggal = document.getElementById('tanggal');
-//                 const sumber = document.getElementById('sumber');
+getDetail(idArtikel);
 
-//                 // Set article data to DOM elements
-//                 title.textContent = data.judul;
-//                 par1.textContent = data.par_1;
-//                 par2.textContent = data.par_2;
-//                 img.src = data.img;
-//                 img.alt = data.judul;
-//                 img2.src = data.img2;
-//                 img2.alt = data.judul;
-//                 tanggal.textContent = data.tanggal;
-//                 sumber.textContent = data.sumber;
-//             })
-//             .catch(error => console.log(error));
-//     });
-// });
+const displayDetail = (data) => {
+  document.querySelector('.body_artikel').innerHTML += `
+      <div class="hero">
+        <img id="img" src=${data.img} />
+        <p id="judul ">${data.judul}</p>
+      </div>
+        <div id="par_1 ">
+        <p id="par_1 ">${data.par_1}</p>
+      </div>
+      <img id="img2 " src=${data.img2} />
+     <div class="par_2 ">
+       <p id="par_2 ">${data.par_2}</p>
+     </div>
+     <div class="ket ">
+       <p id="tanggal ">${data.tanggal}</p>
+       <p id="sumber ">${data.sumber}</p>
+     </div>`;
+};

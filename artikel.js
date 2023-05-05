@@ -1,18 +1,18 @@
 const apiUrl = 'https://645348fbc18adbbdfe9933f9.mockapi.io/artikel';
 
-const getAllArtikel = async(url) => {
-    const res = await fetch(url);
+const getAllArtikel = async (url) => {
+  const res = await fetch(url);
 
-    const data = await res.json();
-    console.log(data);
-    displayArtikel(data);
+  const data = await res.json();
+  console.log(data);
+  displayArtikel(data);
 };
 
 getAllArtikel(apiUrl);
 
 const displayArtikel = (data) => {
-    data.map((artikel) => {
-        document.getElementById('article-section').innerHTML += `
+  data.map((artikel) => {
+    document.getElementById('article-section').innerHTML += `
     <article>
         <div class="article-wrapper">
             <figure>
@@ -23,7 +23,7 @@ const displayArtikel = (data) => {
                 <!-- <p>
                     Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
                 </p> -->
-                <a href="#" class="read-more">Read more <span class="sr-only">about this is some title</span>
+                <a href="detail_artikel.html?id=${artikel.id}" class="read-more">Read more <span class="sr-only">about this is some title</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
                         fill="currentColor">
                         <path fill-rule="evenodd"
@@ -34,5 +34,5 @@ const displayArtikel = (data) => {
             </div>
         </div>
     </article>`;
-    });
+  });
 };
