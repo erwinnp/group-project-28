@@ -1,38 +1,45 @@
 const apiUrl = 'https://645348fbc18adbbdfe9933f9.mockapi.io/artikel';
+const articleSection = document.querySelector('#article');
 
-const getAllArtikel = async (url) => {
-  const res = await fetch(url);
-
-  const data = await res.json();
-  console.log(data);
-  displayArtikel(data);
+const getAllArticles = async (url) => {
+  await fetch(url, {
+    method: 'GET',
+    headers: { 'content-type': 'application/json' },
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      displayArticles(result);
+    });
 };
 
-getAllArtikel(apiUrl);
+getAllArticles(apiUrl);
 
-const displayArtikel = (data) => {
-  data.map((artikel) => {
-    document.getElementById('article-section').innerHTML += `
-    <article>
-        <div class="article-wrapper">
-            <figure>
-                <img src=${artikel.img} alt="" />
-            </figure>
-            <div class="article-body">
-                <p>${artikel.judul}</p>
-                <!-- <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p> -->
-                <a href="detail_artikel.html?id=${artikel.id}" class="read-more">Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                        fill="currentColor">
-                        <path fill-rule="evenodd"
-                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd" />
-                    </svg>
-                </a>
+const displayArticles = (data) => {
+  data.map((article) => {
+    articleSection.innerHTML += `
+    <article class="w-full flex sm:flex-col-reverse gap-8 sm:gap-2">
+          <div class="w-3/4 sm:w-full sm:h-full space-y-4">
+            <p class="text-[14px] sm:text-[24px] font-medium">
+                ${article.judul}
+            </p>
+            <div
+              class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2"
+            >
+              <p class="text-[14px] sm:text-base">${article.tanggal}</p>
+              <a
+                href="detail_artikel.html?id=${article.id}"
+                class="rounded-full text-center sm:text-base bg-[#E0F6E5] px-[16px] py-[6px] text-[12px] text-[#52C41A] hover:bg-[#30C04F] hover:text-white"
+                >Baca Selengkapnya</a
+              >
             </div>
-        </div>
-    </article>`;
+          </div>
+          <div class="w-80 h-36 sm:w-full sm:h-56">
+            <img
+              src=${article.img}
+              class="w-full h-full object-cover rounded-xl"
+              alt=""
+            />
+          </div>
+        </article>`;
   });
 };
