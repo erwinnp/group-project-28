@@ -1,0 +1,442 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset CSS, Basic Style, & Variables */
+:root {
+  --green: #52c41a;
+  --black: #141414;
+  --grey: #8c8c8c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+}
+
+/* Navbar styles */
+header {
+  z-index: 2;
+  background-color: #fff;
+}
+
+nav {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.navbar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.navbar__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+
+.menu__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu__item {
+  color: var(--black);
+}
+
+.menu__item:hover {
+  color: var(--green);
+}
+
+.menu__button {
+  padding: 8px 32px;
+  background-color: var(--green);
+  color: #fff;
+  border-radius: 4px;
+}
+
+.menu__button-a {
+  color: #fff;
+}
+
+.menu__button:hover {
+  opacity: 90%;
+}
+
+.logout__button {
+  color: #e63946;
+}
+
+/* Hero styles */
+#hero {
+  padding: 220px 100px 0px;
+}
+
+.hero__wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero__left {
+  max-width: 540px;
+}
+
+.hero__title {
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.hero__paragraph {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--grey);
+  padding-top: 12px;
+  padding-bottom: 32px;
+}
+
+.hero__cta {
+  padding: 12px 32px;
+  background-color: var(--green);
+  color: #fff;
+  border-radius: 4px;
+}
+
+.hero__cta > a {
+  color: #fff;
+}
+
+.hero__cta:hover {
+  opacity: 90%;
+}
+
+.hero__right {
+  max-width: 610px;
+  height: 420px;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero__socialproof {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialproof__text {
+  font-weight: 300;
+}
+
+.socialproof__text > span {
+  font-weight: 600;
+  color: var(--green);
+}
+
+.bg__gradient {
+  position: absolute;
+  left: 80%;
+  top: 30%;
+  width: 598px;
+  height: 598px;
+  background: linear-gradient(143.06deg, #14ae5c 7.81%, #aff4c6 101.85%);
+  filter: blur(300px);
+  z-index: 0;
+}
+
+/* Artikel styles */
+.section__artikel,
+.section__donasi,
+.section__banner {
+  padding: 120px 100px 0px;
+}
+
+.artikel__title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 64px;
+}
+
+.artikel__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 48px;
+}
+
+.artikel__card {
+  max-width: 610px;
+  display: flex;
+  gap: 20px;
+}
+
+.card__img {
+  flex: 1 1 auto;
+  max-width: 295px;
+  height: 300px;
+}
+
+.img__artikel {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card__content {
+  max-width: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.content__tag {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--green);
+}
+
+.content__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.content__desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--grey);
+}
+
+.content__cta {
+  font-size: 14px;
+  color: var(--green);
+  background: rgba(82, 196, 26, 0.15);
+  padding: 4px 20px;
+  border-radius: 20px;
+}
+
+.content__cta:hover {
+  background: rgba(82, 196, 26, 0.45);
+}
+
+/* Donasi style */
+.banner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-color: #000;
+  border-radius: 12px;
+}
+
+.banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 60%;
+}
+
+.banner__title {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 600;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.banner__cta {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  top: 76%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 12px 32px;
+  border-radius: 4px;
+}
+
+.donasi__card-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.donasi__card {
+  max-width: 480px;
+  height: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.donasi__card-img {
+  width: 100%;
+  height: 480px;
+}
+
+.donasi__card-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.donasi__author {
+  color: var(--green);
+}
+
+.donasi__title {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.donasi__cta {
+  padding: 12px 48px;
+  background-color: var(--green);
+  color: #fff;
+  border-radius: 4px;
+}
+
+.donasi__cta:hover {
+  opacity: 90%;
+}
+
+.section__banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__img {
+  max-width: 600px;
+  height: 740px;
+  flex: 1 1 0%;
+}
+
+.form__img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.form__wrapper {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form__wrapper > h1 {
+  font-size: 38px;
+  line-height: 48px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__field > input {
+  padding: 8px 12px;
+  font-size: 20px;
+}
+
+.form__field > label {
+  font-size: 20px;
+}
+
+.form__field-check {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.form__field-check > input {
+  height: 24px;
+  width: 24px;
+}
+
+#submit-form {
+  background-color: var(--green);
+  padding: 12px 32px;
+  width: 20%;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 16px;
+}
+
+#warning {
+  font-size: 20px;
+  font-weight: 500;
+  color: red;
+}
+
+footer {
+  border-top: 2px solid var(--green);
+}

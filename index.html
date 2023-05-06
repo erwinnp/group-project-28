@@ -1,15 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>Landingpage</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <nav>Grup Project FE 28</nav>
-    </header>
-    <main>Artikle Website</main>
+    <main>
+      <header style="padding: 0 100px">
+        <nav>
+          <div class="navbar__wrapper">
+            <a class="navbar__logo" href="#">Hijauin.</a>
+            <div class="navbar__menu">
+              <ul class="menu__wrapper">
+                <li><a class="menu__item" href="index.html">Home</a></li>
+                <li>
+                  <a class="menu__item" href="page/artikel_page.html"
+                    >Artikel</a
+                  >
+                </li>
+                <li><a class="menu__item" href="#">Donasi</a></li>
+              </ul>
+              <button class="menu__button" type="submit">
+                <a class="menu__button-a" href="page/login.html">Login</a>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section id="hero">
+        <div class="hero__wrapper">
+          <div class="hero__left">
+            <div class="hero__text">
+              <h1 class="hero__title">
+                Lindungi Bumi Kita, Hijaukan Hutan Bersama!
+              </h1>
+              <p class="hero__paragraph">
+                Lorem ipsum dolor sit amet consectetur, senectus nulla quam.
+                Morbi ultricies dapibus auctor a.
+              </p>
+              <button class="hero__cta">
+                <a href="./page/artikel_page.html">Mari Baca Artikel</a>
+              </button>
+            </div>
+            <div class="hero__socialproof">
+              <div class="socialproof_item">
+                <img
+                  src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015473/article-icon_zgs5jp.png"
+                  alt="icon-article"
+                />
+                <p class="socialproof__text"><span>87</span> Artikel Terkini</p>
+              </div>
+              <div class="socialproof_item">
+                <img
+                  src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015473/event-icon_f587s5.png"
+                  alt="icon-article"
+                />
+                <p class="socialproof__text"><span>32</span> Event Berjalan</p>
+              </div>
+              <div class="socialproof_item">
+                <img
+                  src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015472/user-icon_aydjcz.png"
+                  alt="icon-article"
+                />
+                <p class="socialproof__text"><span>138</span> Berkontribusi</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero__right">
+            <img
+              class="hero__img"
+              src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015475/hero-img_upmbsm.jpg"
+              alt="hero-img"
+            />
+          </div>
+        </div>
+        <div class="bg__gradient" />
+      </section>
+
+      <section class="section__artikel">
+        <h3 class="artikel__title">Artikel Terkini</h3>
+        <div class="artikel__wrapper">
+          <div class="artikel__card">
+            <div class="card__img">
+              <img
+                class="img__artikel"
+                src="https://res.cloudinary.com/dso5ztlee/image/upload/v1681366438/artikel-banjir_f9r7mg.jpg"
+                alt=""
+              />
+            </div>
+            <div class="card__content">
+              <div class="content__wrapper">
+                <h3 class="content__tag">Terkini</h3>
+                <h2 class="content__title">
+                  Puluhan kecamatan di Jateng terendam banjir
+                </h2>
+                <p class="content__desc">
+                  Perubahan iklim yang terjadi semakin lama memicu kekeringan
+                </p>
+              </div>
+              <a class="content__cta" href="#">Baca Selengkapnya</a>
+            </div>
+          </div>
+          <div class="artikel__card">
+            <div class="card__img">
+              <img
+                class="img__artikel"
+                src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015476/article-2_bk4qnz.jpg"
+                alt=""
+              />
+            </div>
+            <div class="card__content">
+              <div class="content__wrapper">
+                <h3 class="content__tag">Terkini</h3>
+                <h2 class="content__title">
+                  Ancaman kekeringan yang disebabkan perubahan iklim
+                </h2>
+                <p class="content__desc">
+                  Perubahan iklim yang terjadi semakin lama memicu kekeringan
+                </p>
+              </div>
+              <a class="content__cta" href="#">Baca Selengkapnya</a>
+            </div>
+          </div>
+          <div class="artikel__card">
+            <div class="card__img">
+              <img
+                class="img__artikel"
+                src="https://res.cloudinary.com/dso5ztlee/image/upload/v1681366438/artikel-es_srffcg.jpg"
+                alt=""
+              />
+            </div>
+            <div class="card__content">
+              <div class="content__wrapper">
+                <h3 class="content__tag">Terkini</h3>
+                <h2 class="content__title">
+                  Lapisan es terus mencair! Apa dampaknya?
+                </h2>
+                <p class="content__desc">
+                  Lapisan es yang berada di kutub bumi semakin mencari, berikut
+                  dampaknya
+                </p>
+              </div>
+              <a class="content__cta" href="#">Baca Selengkapnya</a>
+            </div>
+          </div>
+          <div class="artikel__card">
+            <div class="card__img">
+              <img
+                class="img__artikel"
+                src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015476/article-1_sl7xqd.jpg"
+                alt=""
+              />
+            </div>
+            <div class="card__content">
+              <div class="content__wrapper">
+                <h3 class="content__tag">Terkini</h3>
+                <h2 class="content__title">Greenhouse, hijaukan sekitar!</h2>
+                <p class="content__desc">
+                  Greenhouse merupakan salah satu upaya penghijauan yang efektif
+                </p>
+              </div>
+              <a class="content__cta" href="#">Baca Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__donasi">
+        <h3 class="artikel__title">Donasi</h3>
+        <div>
+          <div class="banner">
+            <img
+              class="banner__img"
+              src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015474/article-5_tb5nep.jpg"
+              alt="banner-donasi"
+            />
+            <p class="banner__title">Bersama kami, hijaukan kembali bumi</p>
+            <button class="banner__cta">Ikut Donasi Sekarang</button>
+          </div>
+          <div class="donasi__card-wrapper">
+            <div class="donasi__card">
+              <div class="donasi__card-img">
+                <img
+                  src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015476/donasi-1_gb7exq.jpg"
+                  alt="donasi-satu"
+                />
+              </div>
+              <div>
+                <p class="donasi__author">Oleh : Hijauin.</p>
+                <h2 class="donasi__title">
+                  Ayobantu Galang Donasi Untuk Pelestarian Semua Hutan
+                  Kalimantan
+                </h2>
+              </div>
+              <button class="donasi__cta" type="button">Bantu Donasi</button>
+            </div>
+            <div class="donasi__card">
+              <div class="donasi__card-img">
+                <img
+                  src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015474/donasi-3_xgimqq.jpg"
+                  alt="donasi-satu"
+                />
+              </div>
+              <div>
+                <p class="donasi__author">Oleh : Hijauin.</p>
+                <h2 class="donasi__title">
+                  Ayobantu Galang Donasi Untuk Upaya Peduli Kebersihan Laut
+                  Indonesia
+                </h2>
+              </div>
+              <button class="donasi__cta" type="button">Bantu Donasi</button>
+            </div>
+            <div class="donasi__card">
+              <div class="donasi__card-img">
+                <img
+                  src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015474/donasi-2_alz2j1.jpg"
+                  alt="donasi-satu"
+                />
+              </div>
+              <div>
+                <p class="donasi__author">Oleh : Hijauin.</p>
+                <h2 class="donasi__title">
+                  Ayobantu Galang Donasi Untuk Pelestarian Mangrove Kalimantan
+                </h2>
+              </div>
+              <button class="donasi__cta" type="button">Bantu Donasi</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="banner" class="section__banner">
+        <div class="form__img">
+          <img
+            src="https://res.cloudinary.com/dso5ztlee/image/upload/v1680015478/donasi-4_nxpoin.jpg"
+            alt=""
+          />
+        </div>
+        <div class="form__wrapper">
+          <h1 class="form__title">
+            Lawan perubahan iklim, dan berkontribusi untuk bantu kami lestarikan
+            bumi
+          </h1>
+          <form id="form-input">
+            <div class="form__field">
+              <label for="name">Name</label>
+              <input id="name" type="text" />
+            </div>
+            <div class="form__field">
+              <label for="city">City</label>
+              <input id="city" type="text" />
+            </div>
+            <div class="form__field">
+              <label for="email">Email</label>
+              <input id="email" type="email" />
+            </div>
+            <div class="form__field">
+              <label for="zipCode">Zip Code</label>
+              <input id="zip-code" type="number" />
+            </div>
+            <div class="form__field-check">
+              <input id="status" type="checkbox" />
+              <label id="check">
+                Dengan ini saya menyatakan data yang diisi pada form ini adalah
+                benar dan telah sesuai
+              </label>
+            </div>
+            <button type="submit" id="submit-form">Submit</button>
+            <div id="warning"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="section__footer">
+        <div class="footer__left">
+          <h3>Hijauin.</h3>
+          <p id="description">
+            Bersama kita bisa membuat perubahan. Bergabung dengan kami untuk
+            mendapatkan info terbaru seputar krisis iklim.
+          </p>
+        </div>
+        <div class="footer__right">
+          <div class="footer__menu">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Artikel</a></li>
+              <li><a href="#">Events & Donasi</a></li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <h4>Hubungi Kami</h4>
+            <ul>
+              <li><a href="#">support#hijauin.com</a></li>
+              <li><a href="#">021-0981-2171</a></li>
+              <li><a href="#">Hijauin, Indonesia, 57322</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>Copyright 2023 • All rights reserved • Hijauin • FE28/BE10</p>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
