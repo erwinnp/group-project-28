@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Hijauin | Home</title>
+  </head>
+  <body class="sm:max-w-[1240px] mx-auto">
+    <main class="w-full px-[20px] sm:px-0 h-full">
+      <header>
+        <nav>
+          <div class="navbar__wrapper">
+            <a class="navbar__logo" href="#">Hijauin.</a>
+            <div class="navbar__menu">
+              <ul class="menu__wrapper">
+                <li><a class="menu__item" href="index.html">Home</a></li>
+                <li>
+                  <a class="menu__item" href="page/artikel_page.html"
+                    >Artikel</a
+                  >
+                </li>
+                <li><a class="menu__item" href="#">Donasi</a></li>
+              </ul>
+              <button class="menu__button" type="submit">
+                <a class="menu__button-a" href="page/login.html">Login</a>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="source-article" class="flex flex-col gap-2 mb-4"></section>
+
+      <section id="detail-article"></section>
+
+      <footer class="flex flex-col items-center gap-6 mt-[40px] py-[20px]">
+        <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
+          <div class="sm:w-1/2">
+            <a class="navbar__logo" href="#">Hijauin.</a>
+            <p>
+              Bersama kita bisa membuat perubahan. Bergabung dengan kami untuk
+              mendapatkan info terbaru seputar krisis iklim.
+            </p>
+          </div>
+          <div class="flex justify-between sm:gap-10">
+            <div>
+              <p class="text-[20px]">Menu</p>
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Artikel</a></li>
+                <li><a href="">Donasi</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-[20px]">Hubungi Kami</p>
+              <ul>
+                <li><a href="">support@hijauin.id</a></li>
+                <li><a href="">021-0981-2171</a></li>
+                <li><a href="">Hijauin, Indonesia, 57322</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p>Copyright 2023 • All rights reserved • Hijauin • FE28/BE10</p>
+      </footer>
+    </main>
+
+    <script src="../js/detail_artikel.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
