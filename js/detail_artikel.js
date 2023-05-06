@@ -1,4 +1,5 @@
 const apiUrl = 'https://645348fbc18adbbdfe9933f9.mockapi.io/artikel';
+const apiAuth = 'https://643ea9d8c72fda4a0bfd69ad.mockapi.io/api/v1';
 const params = new URLSearchParams(window.location.search);
 const idArtikel = params.get('id');
 const detailArticle = document.getElementById('detail-article');
@@ -55,10 +56,61 @@ const displayDetail = (data) => {
 };
 
 const getComment = async (id) => {
-  const res = await fetch(`${apiUrl}/${id}/komen`);
-
-  const comment = await res.json();
-  console.log(comment);
+  await fetch(`${apiUrl}/${id}/komentar`, {
+    method: 'GET',
+    headers: { 'content-type': 'application/json' },
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      displayComment(result);
+      console.log(result);
+    });
 };
 
 getComment(idArtikel);
+
+const displayComment = (data) => {
+  data.map((comment) => {
+    commentSection.innerHTML += `
+        <div class="flex flex-col gap-2">
+        <p class="text-xl font-medium">${comment.username}</p>
+        <p class="text-base">${comment.komen}</p>
+        </div>`;
+  });
+};
+
+let user = JSON.parse(localStorage.getItem('users'));
+console.log(user);
+let newCommnet = {
+  username: user.username,
+  email: user.email,
+  komen: 'Test komentar',
+};
+console.log(newCommnet);
+
+let postComment = document.getElementById('post');
+let textComment = document.getElementById('comment');
+let commentSection = document.getElementById('comment-article');
+
+postComment.addEventListener('click', (e) => {
+  e.preventDefault();
+  const idArtikel = params.get('id');
+  const postCommentText = async (id) => {
+    await fetch(`${apiUrl}/${id}/komentar`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        username: user.username,
+        email: user.email,
+        komen: textComment.value,
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        location.reload();
+      });
+  };
+
+  postCommentText(idArtikel);
+});
